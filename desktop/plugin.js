@@ -251,7 +251,8 @@ function TranslateMenu() {
           jsx(DropdownMenuSeparator, {}),
           jsx('div', {
             // Ten rows (~17.5rem) stay visible; the rest scroll inside the menu.
-            className: 'max-h-[17.5rem] overflow-y-auto',
+            // Inline: Tailwind never scans desktop-plugins, so utilities here have no CSS.
+            style: { maxHeight: '17.5rem', overflowY: 'auto' },
             children: LANGS.map(lang =>
               jsx(
                 DropdownMenuItem,
