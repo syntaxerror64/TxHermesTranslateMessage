@@ -1,0 +1,9 @@
+{
+  "name": "translate-guard",
+  "label": "Translate Guard",
+  "description": "Каскадный переводчик: Google → Mozhi (6 инстансов) → SimplyTranslate → Lingva → MyMemory.",
+  "icon": "globe",
+  "version": "1.0.0",
+  "api": "plugin_api.py",
+  "tab": { "hidden": true }
+}
