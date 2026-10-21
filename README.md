@@ -15,12 +15,13 @@ composer can flip between the two.
 
 | Surface | Behaviour |
 |---|---|
-| Composer (▾ next to the send button) | Menu with the **auto-translate** switch and the target language (English / 中文) |
+| Composer (▾ next to the send button) | Menu with the **auto-translate** switch and the target language — 108 languages, the full Google Translate set |
 | Send | The draft is translated through the engine cascade, then sent. The chat shows the translation |
 | Edit composer | A small translate icon appears next to its send button; clicking swaps the editor text between the original and the translation |
 | Settings ▸ Plugins ▸ Translate Guard | Mirrors the switch and language, shows live engine health (circuit breakers), and clears the translation cache |
 
-Default state: **auto-translate on**, target language **English**. Chinese is one click away.
+Default state: **auto-translate on**, target language **English**. Every language the cascade engines
+support is selectable (108 codes, ISO-639-1) — from Afrikaans to isiZulu.
 
 ## Installation
 
@@ -51,7 +52,7 @@ materialized.
 ## Usage
 
 - The **▾** button sits to the right of the send button in the composer.
-- Click it to toggle **Auto-translate** or switch the target language.
+- Click it to toggle **Auto-translate** or switch the target language (the list scrolls).
 - With auto-translate on, whatever you type is translated before it leaves your machine's
   composer — the chat keeps the translated text.
 - After sending, open the message in the **edit composer**: the translate icon next to its

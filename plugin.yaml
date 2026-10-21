@@ -1,5 +1,5 @@
 name: translate-guard
-version: 1.1.0
+version: 1.2.0
 description: "Auto-translate outgoing messages through a cascade of public engines (Google, Mozhi, SimplyTranslate, Lingva, MyMemory). Composer switch, edit-composer original/translation toggle, engine health and cache controls in settings."
 author: syntaxerror64
 provides_tools: []
