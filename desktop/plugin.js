@@ -249,23 +249,27 @@ function TranslateMenu() {
             ]
           }),
           jsx(DropdownMenuSeparator, {}),
-          ...LANGS.map(lang =>
-            jsx(
-              DropdownMenuItem,
-              {
-                onSelect: () => saveSettings({ to: lang.code }),
-                children: jsxs('span', {
-                  className: 'flex w-full items-center justify-between',
-                  children: [
-                    jsx('span', { children: lang.label }),
-                    current.to === lang.code &&
-                      jsx('span', { className: 'opacity-70', children: '✓' })
-                  ]
-                })
-              },
-              lang.code
+          jsx('div', {
+            // Ten rows (~17.5rem) stay visible; the rest scroll inside the menu.
+            className: 'max-h-[17.5rem] overflow-y-auto',
+            children: LANGS.map(lang =>
+              jsx(
+                DropdownMenuItem,
+                {
+                  onSelect: () => saveSettings({ to: lang.code }),
+                  children: jsxs('span', {
+                    className: 'flex w-full items-center justify-between',
+                    children: [
+                      jsx('span', { children: lang.label }),
+                      current.to === lang.code &&
+                        jsx('span', { className: 'opacity-70', children: '✓' })
+                    ]
+                  })
+                },
+                lang.code
+              )
             )
-          )
+          })
         ]
       })
     ]
