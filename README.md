@@ -125,6 +125,10 @@ answer within the timeout, the message is sent as written and a warning toast ap
 that the Hermes backend is running (the desktop log shows `ECONNREFUSED 127.0.0.1:9119` while
 it restarts) and try again.
 
+**The cache button returns 404 after updating the plugin.** The backend mounts a plugin's
+routes once, at startup, and does not rescan an already-mounted plugin. Restart the app (or the
+Hermes backend) after updating, then the new route is live.
+
 **Translation is slow or empty.** One engine may be rate-limited or down; the cascade skips it
 and moves on. The settings page shows which engines are open. MyMemory's free daily quota is
 exhausted fastest.
